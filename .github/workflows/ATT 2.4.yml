@@ -7,5 +7,32 @@ jobs:
   verificar-arquivos:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout do código
+      - name: Checkout do código  
         uses: actions/checkout@v4
+
+      - name: Verificar se README.md existe
+        run: |
+          if [ -f "README.md" ]; then
+            echo "README.md encontrado com sucesso!"
+          else
+            echo "ERRO: O arquivo README.md está faltando!"
+            exit 1
+          fi
+      
+      - name: Verificar se LICENSE existe
+        run: |
+          if [ -f "LICENSE" ]; then
+            echo "LICENSE encontrada"
+          else
+            echo "ERRO -- o arquivo LICENSE não foi encontrada"
+            exit 1 
+          fi 
+      
+      - name: Verificar se .gitignore existe
+        run: |
+          if [ -f ".gitignore" ]; then
+            echo ".gitignore encontrado com sucesso!"
+          else
+            echo "ERRO: O arquivo .gitignore está faltando!"
+            exit 1
+          fi
