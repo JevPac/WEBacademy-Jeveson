@@ -1,1 +1,27 @@
 
+name: Primeiro Workflow
+
+on: 
+    push:
+
+jobs:
+  executar-etapas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+      
+      - name: Exibir data e hora da execução
+        run: date
+      
+      - name: Exibir versão do sistema
+        run: uname -a
+
+      - name: exibir versão do Git
+        run: git --version
+        
+      - name: Exibir conteudo do README.md
+        run: cat README.md
+        
+      - name: listar arquivos
+        run: ls -la
