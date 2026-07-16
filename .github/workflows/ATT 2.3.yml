@@ -1,3 +1,9 @@
+
+name: Terceiro Workflow
+
+on: 
+    push:
+
 env:
   CURSO: "Integração Contínua"
 
