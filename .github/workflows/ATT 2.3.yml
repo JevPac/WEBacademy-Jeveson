@@ -1,0 +1,13 @@
+env:
+  CURSO: "Integração Contínua"
+
+jobs:
+  mostrar-variaveis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exibir informações
+        run: |
+          echo "Nome do Curso: ${{ env.CURSO }}"
+          echo "Usuário que executou: ${{ github.actor }}"
+          echo "Nome do repositório: ${{ github.repository }}"
+          echo "Branch utilizada: ${{ github.ref_name }}"
