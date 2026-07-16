@@ -1,17 +1,17 @@
+
 name: Primeiro Workflow
 
 on: 
     push:
 
 jobs:
-    primeiro-job:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo"primeiro"
-            - name: Checkout
-              uses: actions/checkout@v5
-            - name: Lista arquivos
-              run: Is ${{ github.workspace }}
-            - name: Status
-              run: echo "Status ${{ job.status }}"
-              
+  primeiro-job:
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo"primeiro"
+        - name: Checkout
+          uses: actions/checkout@v5
+        - name: Lista arquivos
+          run: Is ${{ github.workspace }}
+        - name: Status
+          run: echo "Status ${{ job.status }}"
